@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: imrui
-subtitle:
-description: 人生若只如初见，何事秋风悲画扇。
+title: 七月流火 - 董瑞博客
+subtitle: imrui
+description: 董瑞, 董瑞博客, rui, dongrui, imrui
 author: Rui
 language: zh-Hans
 timezone:
@@ -72,3 +72,9 @@ deploy:
   type: git
   repo: git@github.com:imrui/imrui.github.io.git
   branch: master
+
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
