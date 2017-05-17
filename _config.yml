@@ -5,7 +5,7 @@
 # Site
 title: imrui
 subtitle:
-description:
+description: 人生若只如初见，何事秋风悲画扇。
 author: Rui
 language: zh-Hans
 timezone:
@@ -40,7 +40,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -62,10 +62,24 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+#plugins:
+#  - hexo-generator-feed
+#  - hexo-generator-baidu-sitemap
+
 ## Themes: https://hexo.io/themes/
 theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:imrui/imrui.github.io.git
+  branch: master
+
+#feed:
+#  type: atom
+#  path: atom.xml
+
+#sitemap
+#baidusitemap:
+#    path: baidusitemap.xm

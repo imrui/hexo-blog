@@ -42,7 +42,7 @@ menu:
   categories: /categories
   tags: /tags
 #  about: /about
-  #sitemap: /sitemap.xml
+#  sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -156,7 +156,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /res/icon.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -201,12 +201,12 @@ sidebar:
 
 
 # Blog rolls
-links_title: Links
-links_layout: block
-#links_layout: inline
-links:
+#links_title: Links
+#links_layout: block
+#icon#links_layout: inline
+#links:
   #Title: http://example.com/
-  LeetCode: https://leetcode.com/
+#  LeetCode: https://leetcode.com/
 
 
 # ---------------------------------------------------------------
@@ -292,12 +292,12 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: imruiblog
+#duoshuo_shortname: imruiblog
 
 # Disqus
 disqus:
   enable: true
-  shortname: imrui.disqus.com
+  shortname: imrui
   count: true
 
 # Hypercomments
@@ -477,7 +477,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 #three_waves: true
 
 # Script Vendors.
@@ -531,7 +531,9 @@ vendors:
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
 
-
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /res/wechat.jpg
+alipay: /res/alipay.jpg
 
 # Assets
 css: css
