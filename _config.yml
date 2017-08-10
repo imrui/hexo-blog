@@ -10,6 +10,12 @@ author: Rui
 language: zh-Hans
 timezone:
 
+# 备案
+beian:
+  enable: true
+  no: 京ICP备17046037号
+  link: http://www.miitbeian.gov.cn
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.imrui.net

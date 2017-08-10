@@ -8,6 +8,12 @@
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
 </div>
 
+{% if config.beian.enable %}
+<div class="powered-by">
+  <a href="{{ config.beian.link }}" target="_blank">{{ config.beian.no }}</a>
+</div>
+{% endif %}
+
 {% if theme.copyright %}
 <div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
