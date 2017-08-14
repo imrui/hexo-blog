@@ -13,7 +13,7 @@ timezone:
 # 备案
 beian:
   enable: true
-  no: 京ICP备17046037号
+  no: 京ICP备17046037号-1
   link: http://www.miitbeian.gov.cn
 
 # URL
