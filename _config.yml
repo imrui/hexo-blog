@@ -10,11 +10,17 @@ author: Rui
 language: zh-Hans
 timezone:
 
-# 备案
-beian:
+# 工信部备案
+miitbeian:
   enable: true
   no: 京ICP备17046037号-1
   link: http://www.miitbeian.gov.cn
+
+# 公安机关备案
+beian:
+  enable: true
+  no: 京公网安备 11010502033928号
+  link: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502033928
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
