@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用RedisTemplate访问Redis数据结构
+title: Spring RedisTemplate的使用
 categories: [Spring]
 tags: [Spring, Redis]
 ---
