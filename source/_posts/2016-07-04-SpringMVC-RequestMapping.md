@@ -1,8 +1,8 @@
 ---
 layout: post
 title: SpringMVC RequestMapping
-category: SpringMVC
-tags: [spring, springmvc]
+category: Spring
+tags: [Spring, SpringMVC]
 ---
 
 Quick note about request mapping annotations in SpringMVC controller

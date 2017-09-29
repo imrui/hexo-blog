@@ -2,7 +2,7 @@
 layout: post
 title: Nginx配置Google Fonts反向代理
 categories: [Nginx]
-tags: [nginx]
+tags: [Nginx]
 ---
 
 使用Nginx反向代理谷歌字体库，可以设置缓存加快访问速度。
@@ -14,6 +14,7 @@ tags: [nginx]
 ```
 https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic
 ```
+<!-- more -->
 
 ## 国内镜像
 
@@ -29,7 +30,6 @@ http://fonts.gmirror.org/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata
 1. 大部分镜像不支持https
 2. 打开页面的速度寄托在别人的服务器
 3. 特殊网络环境可能无法访问
-<!-- more -->
 
 ## 搭建反向代理服务
 
