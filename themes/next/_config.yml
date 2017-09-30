@@ -136,7 +136,7 @@ font:
 social:
   GitHub: https://github.com/imrui
   Coding: https://coding.net/u/hilo
-  微博: http://weibo.com/qlcr
+  Weibo: http://weibo.com/qlcr
 #  Twitter: https://twitter.com/imruido
 #  Facebook: https://www.facebook.com/rui.dong.507
 
@@ -204,12 +204,14 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: 友情链接
 #links_layout: block
 #icon#links_layout: inline
-#links:
+links:
   #Title: http://example.com/
-#  LeetCode: https://leetcode.com/
+  YYland: http://blog.yyland.com/
+  LqRen: http://ren.yyland.com/
+  LeetCode: https://leetcode.com/
 
 
 # ---------------------------------------------------------------
