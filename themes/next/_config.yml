@@ -209,8 +209,8 @@ links_title: 友情链接
 #icon#links_layout: inline
 links:
   #Title: http://example.com/
-  YYland: http://blog.yyland.com/
-  LqRen: http://ren.yyland.com/
+#  YYland: http://blog.yyland.com/
+  画江湖盟主: https://www.66hjh.com/
   LeetCode: https://leetcode.com/
 
 
@@ -482,8 +482,8 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
-#canvas_nest: true
+#canvas_nest: false
+canvas_nest: true
 #three_waves: true
 
 # Script Vendors.
