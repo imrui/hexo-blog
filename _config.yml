@@ -13,8 +13,8 @@ timezone:
 # 工信部备案
 miitbeian:
   enable: true
-  no: 京ICP备17046037号-1
-  link: http://www.miitbeian.gov.cn
+  no: 京ICP备17046037号
+  link: http://www.beian.miit.gov.cn
 
 # 公安机关备案
 beian:
