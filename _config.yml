@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 miitbeian:
   enable: true
   no: 京ICP备17046037号
-  link: http://www.beian.miit.gov.cn
+  link: http://beian.miit.gov.cn/
 
 # 公安机关备案
 beian:
