@@ -1,2 +1,3 @@
 # hexo-blog
-blog made with hexo
+
+blog by hexo

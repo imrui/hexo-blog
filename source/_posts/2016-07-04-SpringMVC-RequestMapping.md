@@ -6,7 +6,7 @@ tags: [Spring, SpringMVC]
 ---
 
 Quick note about request mapping annotations in SpringMVC controller
-
+<!-- more -->
 ## @RequestMapping
 
 Annotation for **mapping web requests onto specific handler classes and/or handler methods**. It means `DispatcherServlet` intercepts the request, then it switches request to the corresponding method determined by @RequestMapping.
