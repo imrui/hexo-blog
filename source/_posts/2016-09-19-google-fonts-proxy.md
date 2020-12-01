@@ -5,8 +5,8 @@ categories: [Nginx]
 tags: [Nginx]
 ---
 
-使用Nginx反向代理谷歌字体库，可以设置缓存加快访问速度。
-
+使用Nginx反向代理谷歌字体库，可缓存加快访问速度。
+<!-- more -->
 ## 谷歌字体库
 
 比如以下地址，虽然不再被墙，但访问有时不太稳定，加载速度慢。
@@ -14,7 +14,6 @@ tags: [Nginx]
 ```
 https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic
 ```
-<!-- more -->
 
 ## 国内镜像
 

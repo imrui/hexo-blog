@@ -3,6 +3,7 @@ layout: post
 title: RESTful风格鉴权设计
 categories: [Spring]
 tags: [Spring, Redis]
+description: 基于Spring及Redis的Token鉴权设计与实现
 ---
 
 基于Spring及Redis的Token鉴权设计
@@ -11,7 +12,6 @@ tags: [Spring, Redis]
 
 REST (Representational State Transfer) 是一种软件架构风格。它将服务端的信息和功能等所有事物统称为资源，客户端的请求实际就是对资源进行操作，它的主要特点有： 每一个资源都会对应一个独一无二的 url，客户端通过
  HTTP 的 GET、POST、PUT、DELETE 请求方法对资源进行查询、创建、修改、删除操作。 客户端与服务端的交互必须是无状态的。
-<!-- more -->
 
 ## Token身份鉴权
 

@@ -244,7 +244,7 @@ read_more_btn: true
 # Post meta display settings
 post_meta:
   item_text: true
-  created_at: true
+  created_at: false
   updated_at:
     enable: true
     another_day: true
@@ -280,7 +280,7 @@ index:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  WeChat: /images/wxmp-qrcode.jpg || fab fa-weixin
   RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -840,9 +840,9 @@ nprogress:
 # Canvas ribbon
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 300 # The width of the ribbon
-  alpha: 0.6 # The transparency of the ribbon
+  alpha: 0.3 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
 
 

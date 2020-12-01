@@ -29,10 +29,10 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -104,4 +104,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: 'git'
+  repo: git@github.com:imrui/imrui.github.io.git
+  branch: master
+
+sitemap:
+  path: sitemap.xml

@@ -3,13 +3,14 @@ layout: post
 title: Spring RedisTemplate的使用
 categories: [Spring]
 tags: [Spring, Redis]
+description: 介绍Spring RedisTemplate对Redis中5种数据结构的运用
 ---
 
 ## Redis 数据结构简介
 
 Redis 可以存储键与5种不同数据结构类型之间的映射，这5种数据结构类型分别为String（字符串）、List（列表）、Set（集合）、Hash（散列）和 Zset（有序集合）。
 了解更多内容，请参阅官方网站： [官网](https://redis.io/)、[中文网站](http://www.redis.cn/)
-<!-- more -->
+
 下面来对这5种数据结构类型作简单的介绍：
 
 | 结构类型 | 结构存储的值 | 结构的读写能力|
