@@ -42,7 +42,7 @@ http://fonts.gmirror.org/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata
 
 ### 修改nginx缓存
 
-```
+```nginx
 # Nginx Cache Settings
 proxy_temp_file_write_size 128k;
 proxy_temp_path   /data/nginx_cache/proxy_temp;
@@ -51,7 +51,7 @@ proxy_cache_path  /data/nginx_cache/proxy_cache levels=1:2 keys_zone=cache_one:2
 
 其中，`/data/nginx_cache/proxy_temp`和`/data/nginx_cache/proxy_cache`是自定义的目录，如不存在请创建目录。
 
-```
+```shell script
 mkdir -p /data/nginx_cache/proxy_temp
 mkdir -p /data/nginx_cache/proxy_cache
 ```
@@ -62,7 +62,7 @@ mkdir -p /data/nginx_cache/proxy_cache
 
 fonts.yourdomain.com.conf
 
-```
+```nginx
 upstream google {
     server fonts.googleapis.com:443;
 }
