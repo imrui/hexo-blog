@@ -1,3 +1,6 @@
-# blog by hexo
+# Blog Site
 
-www.xxicon.com
+blog published by hexo
+
+- ### www.imrui.net
+- ### www.xxicon.com
