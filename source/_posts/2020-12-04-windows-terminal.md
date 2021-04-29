@@ -9,6 +9,25 @@ description: Windows Terminal 美化配置，Windows 包管理工具 winget / sc
 
 `请参阅` [安装和设置 Windows 终端](https://docs.microsoft.com/zh-cn/windows/terminal/get-started)
 
+```json5
+{
+  "actions": [
+    // 自定义快捷键
+    { "command": "closeWindow", "keys": "alt+F4" },
+    { "command": "nextTab", "keys": "alt+shift+]" },
+    { "command": "prevTab", "keys": "alt+shift+[" },
+    { "command": "nextTab", "keys": "ctrl+alt+right" },
+    { "command": "prevTab", "keys": "ctrl+alt+left" },
+    { "command": "closeTab", "keys": "alt+w" },
+    { "command": "closeTab", "keys": "ctrl+w" },
+    { "command": "newTab", "keys": "alt+t" },
+    { "command": "newTab", "keys": "ctrl+t" },
+    { "command": "newTab", "keys": "ctrl+shift+t" },
+    { "command": "duplicateTab", "keys": "ctrl+shift+d" },
+  ]
+}
+```
+
 ## Windows Terminal 美化
 
 `请参阅` [教程：在 Windows 终端中设置 Powerline](https://docs.microsoft.com/zh-cn/windows/terminal/tutorials/powerline-setup)
