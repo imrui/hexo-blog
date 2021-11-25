@@ -57,6 +57,7 @@ local str = require "resty.string"
 local digest = ngx.hmac_sha1(GITHUB_WEBHOOK_SECRET, req_body)
 
 if not str.to_hex(digest) == dt["sha1"] then
+    ngx.log(ngx.ERR, "signature error")
     return ngx.exit(404)
 end
 
