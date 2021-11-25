@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal 美化与包管理工具
-date: 2020-12-04 16:46:18
+date: 2021-11-24 16:46:18
 tags: [System,开发工具]
 description: Windows Terminal 美化配置，Windows 包管理工具 winget / scoop / chocolatey 的安装使用。
 ---
@@ -31,6 +31,10 @@ description: Windows Terminal 美化配置，Windows 包管理工具 winget / sc
 ## Windows Terminal 美化
 
 `请参阅` [教程：在 Windows 终端中设置 Powerline](https://docs.microsoft.com/zh-cn/windows/terminal/tutorials/powerline-setup)
+
+### Nerd Fonts
+
+Oh My Posh was designed to use [Nerd Fonts](https://www.nerdfonts.com/). Nerd Fonts are popular fonts that are patched to include icons. We recommend [Meslo LGM NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip), but any Nerd Font should be compatible with the standard [themes](https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/themes).
 
 ### 安装 Powerline 字体
 
@@ -167,8 +171,8 @@ scoop bucket list # 列出bucket（）
 ```shell script
 scoop bucket known # 列出已知的bucket
 scoop bucket list # 列出已添加的bucket
-scoop add extras # 添加bucket
-scoop rm games # 移除bucket
+scoop bucket add extras # 添加bucket
+scoop bucket rm games # 移除bucket
 ```
 
 **推荐的bucket**
