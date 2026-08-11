@@ -5,4 +5,10 @@ db.json
 node_modules/
 public/
 .deploy*/
+
+# 编辑器
 .idea/
+.vscode/
+
+# Claude Code 本地个人配置（settings.json 可共享，*.local.json 不可）
+.claude/settings.local.json
