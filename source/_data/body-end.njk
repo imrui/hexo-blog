@@ -1,0 +1,30 @@
+{#
+  绕过 NeXT 8.29 的 canvas_ribbon 缺陷。
+
+  主题模板 layout/_scripts/vendors.njk 给 ribbon.js 加了 defer：
+
+    <script size="..." alpha="..." src="...ribbon.min.js" defer></script>
+
+  而 ribbon.js 靠「自己是文档中最后一个 script」来定位自身、读取参数：
+
+    var o = document.getElementsByTagName("script"), c = o[o.length - 1];
+    config = { a: e(c, "alpha", .6), s: e(c, "size", 90) };
+
+  defer 使脚本推迟到 DOM 解析完毕后才执行，届时最后一个 script 已不是它自己，
+  getAttribute 返回 null，Number(null) 为 0 属 falsy，于是静默回落内置默认值
+  size=90 / alpha=0.6，表现为飘带锯齿密集、颜色过饱和。
+
+  这里改为运行时动态 append script：append 后它即文档中最后一个 script，
+  加载完成执行时能正确读到属性。参数仍取自 _config.next.yml 的 canvas_ribbon。
+  相应地该配置项的 enable 必须置为 false，否则会叠加出两条飘带。
+#}
+<script>
+  (function() {
+    var s = document.createElement('script');
+    s.src = '{{ theme.vendors.canvas_ribbon.url }}';
+    s.setAttribute('size', '{{ theme.canvas_ribbon.size }}');
+    s.setAttribute('alpha', '{{ theme.canvas_ribbon.alpha }}');
+    s.setAttribute('zIndex', '{{ theme.canvas_ribbon.zIndex }}');
+    document.body.appendChild(s);
+  })();
+</script>

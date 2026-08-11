@@ -25,7 +25,7 @@ custom_file_path:
   #postMeta: source/_data/post-meta.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
-  #bodyEnd: source/_data/body-end.njk
+  bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   #style: source/_data/styles.styl
@@ -285,8 +285,9 @@ follow_me:
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
+# 插件已移除（依赖链含 16 项已知漏洞，且未配置 GA 凭据、从未真正生效）
 related_posts:
-  enable: true
+  enable: false
   title: # Custom header, leave empty to use the default one
   display_in_home: true
   params:
@@ -839,8 +840,14 @@ nprogress:
 
 # Canvas ribbon
 # For more information: https://github.com/hustcc/ribbon.js
+# 注意：此处 enable 必须保持 false。
+# NeXT 8.29 的 layout/_scripts/vendors.njk 给 ribbon.js 加了 defer，
+# 而 ribbon.js 依赖「自己是文档最后一个 script」来读取 size/alpha 属性；
+# defer 使其推迟到 DOM 解析完毕后执行，此时读不到属性而静默回落默认值
+# (size=90, alpha=0.6)，表现为飘带锯齿密集、颜色饱和。
+# 改由 source/_data/body-end.njk 动态注入以绕过，下方参数仍然生效。
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 300 # The width of the ribbon
   alpha: 0.3 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
