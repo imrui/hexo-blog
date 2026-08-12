@@ -56,7 +56,7 @@ local str = require "resty.string"
 
 local digest = ngx.hmac_sha1(GITHUB_WEBHOOK_SECRET, req_body)
 
-if not str.to_hex(digest) == dt["sha1"] then
+if str.to_hex(digest) ~= dt["sha1"] then
     ngx.log(ngx.ERR, "signature error")
     return ngx.exit(404)
 end
@@ -64,3 +64,9 @@ end
 os.execute("cd /your/blog/repositorie/path/ && git pull");
 ngx.say("OK")
 ```
+
+> **签名校验务必写成 `~=`**
+>
+> Lua 中 `not` 是一元运算符，优先级**高于** `==`。若写成 `if not str.to_hex(digest) == dt["sha1"] then`，实际会被解析为 `if (not str.to_hex(digest)) == dt["sha1"] then`。
+>
+> `str.to_hex(digest)` 返回非空字符串（真值），`not` 之后恒为 `false`，再与十六进制签名串比较永远不相等——该分支**永不执行**，HMAC 校验形同虚设，任何人知道 URL 即可触发部署。
