@@ -27,5 +27,18 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-next": "^8.29.0",
     "hexo-word-counter": "^0.2.2"
+  },
+  "overrides": {
+    "morgan": "^1.12.1",
+    "compression": "^1.8.2",
+    "js-yaml": "^4.3.2",
+    "moment": "^2.31.0",
+    "dompurify": "^3.4.17",
+    "minimatch@3": {
+      "brace-expansion": "^1.1.21"
+    },
+    "minimatch@5": {
+      "brace-expansion": "^2.1.7"
+    }
   }
 }
