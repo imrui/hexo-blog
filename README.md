@@ -32,6 +32,8 @@ source/
   about/ 404/       独立页面
   images/           图片资源
   CNAME             GitHub Pages 自定义域名绑定
+assets/images/      文章插图（同步到 COS，经 CDN 引用，不参与 Hexo 构建）
+tools/sync-cos.sh   插图同步脚本
 ```
 
 ## 部署架构
@@ -50,6 +52,40 @@ WebHook 侧的实现见文章[《基于 OpenResty + GitHub WebHook 的代码自�
 
 `source/CNAME` 只影响 `imrui.github.io` 的跳转行为（301 到自定义域名），
 对主站没有作用——主站域名由 VPS 侧的 DNS 与 Nginx 配置决定。
+
+## 插图上传
+
+文章插图放在 `assets/images/posts/<日期>-<slug>/NN.webp`，由 `tools/sync-cos.sh`
+增量同步到腾讯云 COS，文章中以 `https://maxcdn.hjhblr.com/blog/posts/...` 引用。
+
+```bash
+pipx install coscmd   # Ubuntu 24.04 起系统 Python 禁止直接 pip install，用 pipx
+bash tools/sync-cos.sh --dry posts/2026-10-20-xxx   # 预览本地文件与对应 URL
+bash tools/sync-cos.sh posts/2026-10-20-xxx         # 只同步某个图组（省略参数则同步全部）
+```
+
+脚本只从环境变量读取 COS 配置，统一使用 `BLOG_COS_` 前缀：
+
+| 变量 | 说明 |
+| :--- | :--- |
+| `BLOG_COS_SECRET_ID` | API 密钥 SecretId |
+| `BLOG_COS_SECRET_KEY` | API 密钥 SecretKey |
+| `BLOG_COS_BUCKET` | 存储桶，如 `your-bucket-1250000000` |
+| `BLOG_COS_REGION` | 地域，如 `ap-guangzhou` |
+
+建议配置为 Windows 用户环境变量。**WSL 默认读不到 Windows 环境变量**，需把变量名加入
+`WSLENV` 才会透传（PowerShell，用户级，已有 `WSLENV` 时请追加而非覆盖）：
+
+```powershell
+[Environment]::SetEnvironmentVariable('BLOG_COS_SECRET_ID', '<SecretId>', 'User')
+[Environment]::SetEnvironmentVariable('BLOG_COS_SECRET_KEY', '<SecretKey>', 'User')
+[Environment]::SetEnvironmentVariable('BLOG_COS_BUCKET', '<bucket-appid>', 'User')
+[Environment]::SetEnvironmentVariable('BLOG_COS_REGION', 'ap-guangzhou', 'User')
+[Environment]::SetEnvironmentVariable('WSLENV', 'BLOG_COS_SECRET_ID:BLOG_COS_SECRET_KEY:BLOG_COS_BUCKET:BLOG_COS_REGION', 'User')
+```
+
+设置后需重开终端（Windows Terminal 需完全退出）才能生效。coscmd 的配置写入临时文件并在退出时删除，
+不会在 `~/.cos.conf` 留下明文密钥。
 
 ## 已知问题
 
